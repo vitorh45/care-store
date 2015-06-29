@@ -1,0 +1,27 @@
+{
+  "name": "care-store",
+  "version": "1.0.0",
+  "description": "Care Store S2IT",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitorh45/care-store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitorh45/care-store/issues"
+  },
+  "homepage": "https://github.com/vitorh45/care-store#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jasmine": "^2.0.1",
+    "gulp-jshint": "^1.11.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}
