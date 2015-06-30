@@ -112,6 +112,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = join(BASE_DIR, STATIC_URL)
 
+STATICFILES_DIRS = (
+   ('static', os.path.join(BASE_DIR, 'static')),
+)
+
 DAB_FIELD_RENDERER = 'django_admin_bootstrapped.renderers.BootstrapFieldRenderer'
 
 from django.contrib import messages
