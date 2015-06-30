@@ -1,1 +1,6 @@
 Django
+django-autoslug
+pillow
+django-bootstrap3
+django-admin-bootstrapped
+
