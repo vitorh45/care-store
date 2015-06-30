@@ -7,8 +7,8 @@ var rename = require('gulp-rename');
 var jasmine = require('gulp-jasmine');
  
 // Definimos o diretorio dos arquivos para evitar repetição futuramente
-var files = "./src/*.js";
-var tests_files = "./src/test/*.js";
+var files = "./static/js/*.js";
+var tests_files = "./static/spec/*.js";
  
 //Aqui criamos uma nova tarefa através do ´gulp.task´ e damos a ela o nome 'lint'
 gulp.task('lint', function() {
@@ -25,7 +25,7 @@ gulp.task('specs', function () {
 });
 
 gulp.task('default', function() {
-	gulp.run('lint', 'dist');
+	gulp.run('lint', 'dist', 'specs');
 	gulp.watch(files, function(evt) {
 		gulp.run('lint', 'dist');
 	});
