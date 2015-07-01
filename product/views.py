@@ -1,7 +1,12 @@
 
 # Create your views here.
-from django.shortcuts import render_to_response
+from django.views.generic import ListView, DetailView
+from product.models import Product
+
+class ProductList(ListView):
+    model = Product
+    context_object_name = 'product_list'
 
 
-def detail(request):
-    return render_to_response('product_detail.html')
+class ProductDetail(DetailView):
+    model = Product
