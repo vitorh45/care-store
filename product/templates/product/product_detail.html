@@ -1,4 +1,10 @@
 {% extends 'core/base.html' %}
 
-{% block title %} S2IT- detalhes produdo {% endblock %}
+{% block title %} S2IT- detalhes produto {% endblock %}
 
+{% block content %}
+
+Nome: {{ product.name }} <br>
+Preço: {{ product.price }}
+
+{% endblock content %}
