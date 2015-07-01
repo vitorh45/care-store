@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+
+{% block title %} S2IT- lista de produto {% endblock %}
+
+{% block content %}
+	{% for product in product_list %}
+		<a href='{% url "product_detail" product.slug %}'>{{ product.name }}</a> 
+		<br>
+	{% endfor %}
+{% endblock %}
