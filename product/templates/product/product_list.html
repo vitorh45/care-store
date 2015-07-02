@@ -2,9 +2,28 @@
 
 {% block title %} S2IT- lista de produto {% endblock %}
 
+
 {% block content %}
-	{% for product in product_list %}
-		<a href='{% url "product_detail" product.slug %}'>{{ product.name }}</a> 
-		<br>
-	{% endfor %}
+<section class="container">
+      <div class="row margin-top">
+        <div class="col col-md-3">
+          <div class="category-panel">
+              <h2><span>CATEGORIAS</span></h2>
+              <a href="#">Teste</a>
+                {% for category in product_category %}
+                    <a href='{{category.id}}'>{{ category.name }}</a>
+                    <br>
+                {% endfor %}
+          </div>
+        </div>
+        <div class="col col-md-9">
+            <h2><span>PRODUTOS</span></h2>
+            {% for product in product_list %}
+                <a href='{% url "product_detail" product.slug %}'>{{ product.name }}</a>
+                <br>
+            {% endfor %}
+        </div>
+      </div>
+      <hr />
+    </section>
 {% endblock %}

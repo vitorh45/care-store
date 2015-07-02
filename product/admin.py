@@ -1,21 +1,16 @@
 from django.contrib import admin
-from .models import Product, Category, Size, ProductImage
+from .models import Product, Category, Option, ProductImage
 
 class AdminInlineSize(admin.TabularInline):
     extra = 1
-    model = Size
+    model = Option
 
 class AdminInlineProductImage(admin.TabularInline):
     extra = 1
     model = ProductImage
 
 class AdminCategory(admin.ModelAdmin):
-
-    def image(obj):
-        return "<img src='%s' width='200'>" % (obj.image.url)
-    image.allow_tags = True
-
-    list_display = ('name','slug', image)
+    list_display = ('name',)
 
 class AdminProduct(admin.ModelAdmin):
 
