@@ -20,8 +20,18 @@
             <div class="product-panel">
                 <h2><span>PRODUTOS</span></h2>
                 {% for product in product_list %}
-                    <a href='{% url "product_detail" product.slug %}'>{{ product.name }}</a>
-                    <br>
+                    <div class="col-md-4">
+                      <div class="product-item">
+                        <div class="product-image">
+                          <a href='{% url "product_detail" product.slug %}'>
+                            <img src="/media/{{ product.main_image }}" alt="{{ product.name }}" />
+                          </a>
+                        </div>
+                        <h2 class="name"><a href='{% url "product_detail" product.slug %}'><span>{{ product.name }}</span></a></h2>
+                        <p class="price"><a href='{% url "product_detail" product.slug %}'>R$ {{ product.price }}</a></p>
+                        <a href="{% url "product_detail" product.slug %}" class="btn btn-primary">VER DETALHES</a>
+                      </div>
+                    </div>
                 {% endfor %}
             </div>
         </div>

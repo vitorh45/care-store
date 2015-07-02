@@ -10,7 +10,7 @@ def slugify_file_name(instance, filename):
 
     path, file_name = split(filename)    
     file_name, ext = splitext(file_name)
-    return '/'.join(['uploads/', slugify(file_name)+ext])
+    return '/'.join(['uploads', slugify(file_name)+ext])
 
 
 class Category(models.Model):
