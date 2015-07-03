@@ -1,3 +1,4 @@
+# -*-coding:UTF-8
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.utils.formats import number_format
